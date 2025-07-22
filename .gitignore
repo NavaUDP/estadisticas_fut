@@ -19,4 +19,4 @@ database/*.db
 database/*.txt
 
 # Ignorar main.py de la raíz del proyecto
-main.py
+database/main.py
