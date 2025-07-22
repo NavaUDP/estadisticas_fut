@@ -17,4 +17,6 @@ venv/
 database/*.sql
 database/*.db
 database/*.txt
-database/*main.py
+
+# Ignorar main.py de la raíz del proyecto
+main.py
