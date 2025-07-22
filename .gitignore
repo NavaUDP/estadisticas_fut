@@ -17,4 +17,4 @@ venv/
 database/*.sql
 database/*.db
 database/*.txt
-main.py
+database/*main.py
