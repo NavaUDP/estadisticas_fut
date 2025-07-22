@@ -1,0 +1,107 @@
+------------------------------ CREACIÓN DE TABLAS ------------------------------
+
+CREATE TABLE public.equipos (
+    id_equipo integer NOT NULL,
+    nombre text NOT NULL,
+    pais text,
+    entrenador text,
+    liga text
+);
+
+CREATE TABLE public.jugadores (
+    id_jugador integer NOT NULL,
+    nombre text NOT NULL,
+    apellido text NOT NULL,
+    nacionalidad text,
+    fecha_nacimiento date,
+    posicion text,
+    id_equipo integer
+);
+
+CREATE TABLE public.partidos (
+    id_partido integer NOT NULL,
+    fecha date NOT NULL,
+    estadio text,
+    equipo_local integer,
+    equipo_visita integer,
+    resultado_local integer,
+    resultado_visita integer
+);
+
+CREATE TABLE public.est_basica_jugador (
+    id_est integer NOT NULL,
+    id_jugador integer,
+    id_partido integer,
+    minutos_jugados integer,
+    goles integer,
+    asistencias integer,
+    tiros integer,
+    tiros_a_puerta integer,
+    fueras_de_juego integer,
+    faltas_cometidas integer,
+    faltas_recibidas integer,
+    amarillas integer,
+    rojas integer,
+    saques_de_banda integer,
+    tiros_de_esquina integer,
+    saque_de_porteria integer
+);
+
+CREATE TABLE public.est_basicas_equipo (
+    id_estadistica integer NOT NULL,
+    id_equipo integer,
+    id_partido integer,
+    goles_a_favor integer,
+    goles_en_contra integer,
+    tiros_totales integer,
+    tiros_a_puerta integer,
+    posesion numeric,
+    faltas_cometidas integer,
+    faltas_recibidas integer,
+    tiros_de_esquina integer,
+    saques_de_banda integer,
+    fueras_de_juego integer,
+    amarillas integer,
+    rojas integer
+);
+
+CREATE TABLE public.est_intermedias_equipo (
+    id_estadistica integer NOT NULL,
+    id_equipo integer,
+    id_partido integer,
+    pases_completados integer,
+    pases_intentados integer,
+    presicion_pases numeric,
+    duelos_ganados integer,
+    duelos_perdidos integer,
+    centros_completados integer,
+    centros_intentados integer,
+    toques_area_rival integer,
+    entradas_totales integer,
+    intercepciones integer,
+    bloqueos integer,
+    posesiones_recuperadas integer,
+    tiempo_medio_posesion text
+);
+
+CREATE TABLE public.est_intermedias_jugador (
+    id_estadistica integer NOT NULL,
+    id_jugador integer,
+    id_partido integer,
+    pases_completados integer,
+    pases_intentados integer,
+    centros_completados integer,
+    centros_intentados integer,
+    regates_intentados integer,
+    regates_completados integer,
+    duelos_ganados integer,
+    duelos_perdidos integer,
+    entradas_realizadas integer,
+    intercepciones integer,
+    despejes integer,
+    bloqueos integer,
+    recuperaciones integer,
+    perdidas integer,
+    toques_totales integer,
+    toques_en_area_rival integer
+);
