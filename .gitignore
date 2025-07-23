@@ -17,6 +17,7 @@ venv/
 database/*.sql
 database/*.db
 database/*.txt
+endpoints/*.env
 
 # Ignorar main.py de la raíz del proyecto
 database/main.py
