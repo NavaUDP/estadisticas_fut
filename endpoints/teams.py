@@ -21,7 +21,7 @@ def get_teams():
                 "nombre": row[1],
                 "pais": row[2],
                 "entrenador": row[3],
-                "liga": row[4],
+                "id_liga": row[4],
             }
             teams.append(team)
 

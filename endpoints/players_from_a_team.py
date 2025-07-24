@@ -24,6 +24,7 @@ def get_players_from_team(team_id):
                 "fecha_nacimiento": row[4].isoformat() if row[4] else None,
                 "posicion": row[5],
                 "id_equipo": row[6],
+                "dorsal": row[7],
             }
             players.append(player)
 
