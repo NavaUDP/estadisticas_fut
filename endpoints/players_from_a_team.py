@@ -33,5 +33,6 @@ def get_players_from_team(team_id):
     except Exception as e:
         print(f"Error al obtener los jugadores del equipo {team_id}: {e}")
         return []
-    
-print(get_players_from_team(1))  
+    finally:
+        cur.close()
+        conn.close()

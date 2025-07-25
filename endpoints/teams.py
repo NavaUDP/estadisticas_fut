@@ -1,4 +1,4 @@
-#Buscamos obtener una lista en JSON de todos los equipos}
+#Buscamos obtener una lista en JSON de todos los equipos
 import psycopg2
 import os
 import json
@@ -30,5 +30,7 @@ def get_teams():
     except Exception as e:
         print(f"Error al obtener los equipos: {e}")
         return []
-    
-print(get_teams())
+
+    finally:
+        cur.close()
+        conn.close()
